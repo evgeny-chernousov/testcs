@@ -50,7 +50,7 @@ namespace test{
    class Program{
      static void Main(string[] args){
          
-         Computer comp1 = new Computer("Mac", "4", "8");
+         Computer comp1 = new Computer("Mac", 4, 8);
          
 
 
