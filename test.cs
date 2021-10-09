@@ -2,8 +2,16 @@ using System;
 
 namespace test{
    public class Computer{
-       private double ramSize;
-       public double RamSize{
+        public string make;
+        private int cpuCount;
+        private double ramSize;
+        public Computer(string make, int cpuCount, double ramSize){
+            this.make = make;
+            this.cpuCount = cpuCount;
+            this.ramSize = ramSize;
+        }
+
+        public double RamSize{
            get{
                return ramSize;
            }
@@ -16,9 +24,7 @@ namespace test{
                }
            }
        }
-
-       private int cpuCount;
-       public int CpuCount{
+        public int CpuCount{
            get{
                return cpuCount;
            }
@@ -32,21 +38,25 @@ namespace test{
            }
        }
 
-       public string make;
+       
 
-       public void GetInfo(){
-           Console.WriteLine("The computer " + this.make + " has " + this.ramSize + " GB RAM amd " + this.cpuCount + " CPU cores"  );
-       }
+        public void GetInfo(){
+            Console.WriteLine("The computer " + this.make + " has " + this.ramSize + " GB RAM amd " + this.cpuCount + " CPU cores"  );
+        }
 
    }
+
+
    class Program{
      static void Main(string[] args){
          
-         Computer comp1 = new Computer();
+         Computer comp1 = new Computer("Mac", "4", "8");
          
-         comp1.make = "Mac";
-         comp1.CpuCount = -2;
-         comp1.RamSize = 16;
+
+
+         //comp1.make = "Mac";
+         //comp1.CpuCount = -2;
+         //comp1.RamSize = 16;
 
          Console.WriteLine(comp1.RamSize);
 
